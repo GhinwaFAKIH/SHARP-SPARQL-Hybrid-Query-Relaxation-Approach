@@ -1,0 +1,56 @@
+Original query and its relaxed queries
+Q2: 
+
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?student
+WHERE {
+  ?student a ub:GraduateStudent;
+                 ub:takesCourse <http://www.department0.university0.edu/graduateCourse0>;
+                 ub:undergraduateDegreeFrom  <http://www.university103.edu>.
+}
+
+RQ1:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?student
+WHERE {
+  ?student a ub:StudentResearcher;
+                 ub:takesCourse <http://www.department0.university0.edu/graduateCourse0>;
+                 ub:undergraduateDegreeFrom  <http://www.university103.edu>.
+}
+
+RQ2:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?student
+WHERE {
+  ?student a ub:Student;
+                 ub:takesCourse <http://www.department0.university0.edu/graduateCourse0>;
+                 ub:undergraduateDegreeFrom  <http://www.university103.edu>.
+}
+
+RQ3:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?student
+WHERE {
+  ?student a ub:GraduateStudent;
+                 ub:takesCourse <http://www.department0.university0.edu/graduateCourse1>;
+                 ub:undergraduateDegreeFrom  <http://www.university103.edu>.
+}
+
+RQ4:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?student
+WHERE {
+  ?student a ub:GraduateStudent;
+                 ub:takesCourse ?course;
+                 ub:undergraduateDegreeFrom  <http://www.university103.edu>.
+}
+
+RQ5:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?student
+WHERE {
+  ?student   a  ub:GraduateStudent.
+  <http://www.department0.university0.edu/associateProfessor6/publication7>      a  ub:Publication ;
+             ub:publicationAuthor ?student.
+}
+

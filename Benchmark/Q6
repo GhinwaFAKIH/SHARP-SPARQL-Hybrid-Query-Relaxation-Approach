@@ -1,0 +1,58 @@
+Original query and its relaxed queries
+Q6: 
+
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?student  WHERE {
+ ?student ub:name ?student_name.
+ <<?student ub:takesCourse  <http://www.department0.university0.edu/undergraduateCourse1> >> ub:semester "Autumn"^^xsd:string;
+                                                    ub:courseYear "2024"^^xsd:integer.
+}
+
+RQ1:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?student  WHERE {
+ ?student ub:name ?student_name.
+ <<?student ub:takesCourse  <http://www.department0.university0.edu/undergraduateCourse1> >> ub:semester "Fall"^^xsd:string;
+                                                    ub:courseYear "2024"^^xsd:integer.
+}
+
+RQ2:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?student  WHERE {
+ ?student ub:name ?student_name.
+ ?Student ub:takesCourse ?course.
+ ?Student1 ub:takesCourse ?course.
+ <<?student1 ub:takesCourse  <http://www.department0.university0.edu/undergraduateCourse1> >> ub:semester "Autumn"^^xsd:string;
+                                                    ub:courseYear "2024"^^xsd:integer.
+}
+
+RQ3:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?student  WHERE {
+ ?student ub:name ?student_name.
+ <<?student ub:takesCourse  <http://www.department0.university0.edu/undergraduateCourse1> >> ub:semester ?semster;
+                                                    ub:courseYear "2024"^^xsd:integer.
+}
+
+RQ4:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?student  WHERE {
+ ?student ub:name ?student_name.
+ <<?student ub:takesCourse  ?course >> ub:semester "Autumn"^^xsd:string;
+                                                    ub:courseYear "2024"^^xsd:integer.
+}
+
+
+RQ5:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?student  WHERE {
+ ?student ub:name ?student_name.
+ <<?student ub:takesCourse  <http://www.department0.university0.edu/undergraduateCourse1> >> ub:semester ?semster;
+                                                    ub:courseYear ?year.
+}

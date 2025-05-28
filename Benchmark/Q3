@@ -1,0 +1,57 @@
+Original query and its relaxed queries
+Q3: 
+
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT DISTINCT ?x
+WHERE
+{ ?x a ub:Publication .
+ ub:publicationAuthor ?z .
+ ?z ub:researchInterest "Gene Expression Analysis" . }
+
+
+RQ1:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT DISTINCT ?x
+WHERE
+{ ?x a ub:Publication ;
+  ?person1 ub:researchInterest "Gene Expression Analysis"  .
+  ?person1 ub:memberOf ?group .
+  ?person2 ub:memberOf ?group .
+  ?pub ub:publicationAuthor ?person2 .}
+
+
+RQ2:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT DISTINCT ?x
+WHERE
+{ ?x a ub:Publication ;
+ ub:publicationAuthor ?z .
+ ?z ub:researchInterest "Gene Expression Profiling" . }
+
+
+RQ3:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT DISTINCT ?x
+WHERE
+{ ?x a ub:Publication ;
+ ub:publicationAuthor ?z .
+ ?z ub:researchInterest "Genomics" . }
+
+
+RQ4:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT DISTINCT ?x
+WHERE
+{ ?x a ub:Publication ;
+ ub:publicationAuthor ?z .
+ ?z ub:researchInterest "Image Segmentation" . }
+
+
+RQ5:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT DISTINCT ?x
+WHERE
+{ ?x a ub:Publication ;
+ ub:publicationAuthor ?z .
+ ?z ub:researchInterest ?interest . }
+

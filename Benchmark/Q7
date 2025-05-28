@@ -1,0 +1,73 @@
+Original query and its relaxed queries
+Q7: 
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?student
+WHERE {
+ ?student a ub:GraduateStudent;
+     ub:takesCourse  <http://www.department0.university0.edu/graduateCourse0> .
+ << ?student ub:undergraduateDegreeFrom ?y >> ub:yearOfAward ?year.
+ FILTER (?year >= "2008"^^xsd:integer && ?year <= "2010"^^xsd:integer ).
+}
+
+RQ1:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?student
+WHERE {
+ ?student a ub:GraduateStudent;
+     ub:takesCourse  <http://www.department0.university0.edu/graduateCourse0> .
+ << ?student ub:undergraduateDegreeFrom ?y >> ub:yearOfAward ?year.
+ FILTER (?year >= "2007"^^xsd:integer && ?year <= "2011"^^xsd:integer ).
+}
+
+RQ2:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?student
+WHERE {
+ ?student a ub:GraduateStudent;
+     ub:takesCourse  <http://www.department0.university0.edu/graduateCourse66> .
+ << ?student ub:undergraduateDegreeFrom ?y >> ub:yearOfAward ?year.
+ FILTER (?year >= "2008"^^xsd:integer && ?year <= "2010"^^xsd:integer ).
+}
+
+SELECT ?student
+WHERE {
+ ?student a ub:GraduateStudent;
+     ub:takesCourse  <http://www.department0.university0.edu/graduateCourse55> .
+ << ?student ub:undergraduateDegreeFrom ?y >> ub:yearOfAward ?year.
+ FILTER (?year >= "2008"^^xsd:integer && ?year <= "2010"^^xsd:integer ).
+}
+
+RQ3:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?student
+WHERE {
+ ?student a ub:GraduateStudent;
+     ub:takesCourse  <http://www.department0.university0.edu/graduateCourse0> .
+ << ?student ub:undergraduateDegreeFrom ?y >> ub:yearOfAward ?year.
+
+}
+
+RQ4:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?student
+WHERE {
+ ?student a ub:GraduateStudent;
+     ub:takesCourse  ?course .
+ << ?student ub:undergraduateDegreeFrom ?y >> ub:yearOfAward ?year.
+ FILTER (?year >= "2008"^^xsd:integer && ?year <= "2010"^^xsd:integer ).
+}
+
+RQ5:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?student
+WHERE {
+ ?student a ub:GraduateStudent.
+ ?pub   ub:publicationAuthor  ?student .
+ ?student ub:undergraduateDegreeFrom <http://www.university0.edu>.
+}
