@@ -1,0 +1,6 @@
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT DISTINCT ?x
+WHERE
+{ ?x a ub:Publication ;
+ ub:publicationAuthor ?z .
+ ?z ub:researchInterest "Gene Expression Analysis" . }

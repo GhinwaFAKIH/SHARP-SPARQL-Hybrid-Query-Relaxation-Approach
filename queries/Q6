@@ -1,0 +1,8 @@
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?student  WHERE {
+ ?student ub:name ?student_name.
+ <<?student ub:takesCourse  <http://www.department0.university0.edu/undergraduateCourse1> >> ub:semester "Autumn"^^xsd:string;
+                                                    ub:courseYear "2024"^^xsd:integer.
+}
+
