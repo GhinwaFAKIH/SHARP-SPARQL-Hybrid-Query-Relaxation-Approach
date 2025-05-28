@@ -1,0 +1,8 @@
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x
+WHERE {
+  ?x a ub:GraduateStudent ;
+      ub:takesCourse <http://www.department0.university0.edu/graduateCourse0> .
+  << ?x ub:undergraduateDegreeFrom ?y >> ub:yearOfAward "2010"^^xsd:integer.
+}

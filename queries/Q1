@@ -1,0 +1,6 @@
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?prof
+WHERE {
+?prof  a   ub:Professor;
+          ub:memberOf <http://www.department403.university4.edu>.
+}
