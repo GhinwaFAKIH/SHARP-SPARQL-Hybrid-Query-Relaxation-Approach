@@ -1,0 +1,85 @@
+Original query and its relaxed queries
+Q5: 
+
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x
+WHERE {
+  ?x a ub:GraduateStudent ;
+      ub:takesCourse <http://www.department0.university0.edu/graduateCourse0> .
+  << ?x ub:undergraduateDegreeFrom ?y >> ub:yearOfAward "2010"^^xsd:integer.
+}
+
+RQ1:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x
+WHERE {
+  ?x a ub:GraduateStudent ;
+      ub:takesCourse <http://www.department0.university0.edu/graduateCourse0> .
+  << ?x ub:undergraduateDegreeFrom ?y >> ub:yearOfAward ?year .
+  FILTER(?year >= 2009 && ?year <= 2011)
+}
+
+RQ2:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x
+WHERE {
+  ?x a ub:GraduateStudent ;
+      ub:takesCourse <http://www.department0.university0.edu/graduateCourse66> .
+  << ?x ub:undergraduateDegreeFrom ?y >> ub:yearOfAward "2010"^^xsd:integer.
+}
+
+SELECT ?x
+WHERE {
+  ?x a ub:GraduateStudent ;
+      ub:takesCourse <http://www.department0.university0.edu/graduateCourse55> .
+  << ?x ub:undergraduateDegreeFrom ?y >> ub:yearOfAward "2010"^^xsd:integer.
+}
+
+
+RQ3:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x
+WHERE {
+  ?x a ub:GraduateStudent ;
+      ub:takesCourse <http://www.department0.university0.edu/graduateCourse0> .
+  << ?x ub:undergraduateDegreeFrom ?y >> ub:yearOfAward "2011"^^xsd:integer.
+}
+
+
+RQ4:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x
+WHERE {
+  ?x a ub:GraduateStudent ;
+      ub:takesCourse <http://www.department0.university0.edu/graduateCourse0> .
+  << ?x ub:undergraduateDegreeFrom ?y >> ub:yearOfAward ?year.
+}
+
+
+RQ5:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x
+WHERE {
+  ?x a ub:GraduateStudent ;
+      ub:takesCourse ?graduatecourse .
+  << ?x ub:undergraduateDegreeFrom ?y >> ub:yearOfAward "2010"^^xsd:integer.
+}
+
+
+RQ6:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?x
+WHERE {
+  ?x a ub:GraduateStudent ;
+       ub:undergraduateDegreeFrom <http://www.university0.edu> .
+  ?pub   ub:publicationAuthor ?x.
+}
+
+

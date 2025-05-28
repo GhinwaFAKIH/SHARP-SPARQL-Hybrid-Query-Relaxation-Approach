@@ -1,0 +1,51 @@
+Original query and its relaxed queries
+Q4: 
+
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?X
+WHERE {
+  ?X    ub:advisor ?Y.
+  ?Y    ub:headOf   <http://www.department3.0.university0.edu>.
+}
+
+
+RQ1:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?X
+WHERE {
+  ?X    ub:advisor ?Y.
+  ?Y    ub:worksFor   <http://www.department3.0.university0.edu>.
+}
+
+RQ2:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?X
+WHERE {
+  ?X    ub:advisor ?Y1.
+  ?pub ub:publicationAuthor ?Y1.
+  ?pub ub:publicationAuthor ?Y2.
+  ?Y2    ub:headOf   <http://www.department3.0.university1.edu>.
+}
+
+RQ3:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?X
+WHERE {
+  ?X    ub:advisor ?Y.
+  ?Y    ub:headOf   <http://www.department804.0.university8.edu>.
+}
+
+RQ4:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?X
+WHERE {
+  ?X    ub:advisor ?Y.
+  ?Y    ub:headOf   ?dept.
+}
+
+RQ5:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?X
+WHERE {
+  ?X    ub:advisor ?Y.
+}

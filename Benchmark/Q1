@@ -1,0 +1,53 @@
+Original query and its relaxed queries
+Q1 - 1: 
+
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?prof
+WHERE {
+?prof  a   ub:Professor;
+           ub:memberOf <http://www.department403.university4.edu>.
+}
+
+RQ1 - 0.8:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?prof
+WHERE {
+?prof  a   ub:Faculty;
+           ub:memberOf <http://www.department403.university4.edu>.
+}
+
+RQ2 - 0.5:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?prof
+WHERE {
+?prof  a   ub:Employee;
+           ub:memberOf <http://www.department403.university4.edu>.
+}
+
+RQ3 - 0.38:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?prof
+WHERE {
+?prof  a   ub:Professor;
+           ub:memberOf <http://www.department422.university4.edu>.
+}
+
+RQ4 - 0.31:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT ?prof
+WHERE {
+?prof  a   ub:Professor;
+           ub:memberOf <http://www.department319.university3.edu>.
+}
+
+RQ5 - 0.23:
+PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+SELECT DISTINCT ?professor
+WHERE {
+  ?x a ub:Publication ;
+     ub:publicationAuthor ?professor, ?csAuthor .
+
+  ?professor a ub:Professor .
+  ?csAuthor ub:memberOf <http://www.department403.university4.edu> .
+  FILTER(?professor != ?csAuthor)
+}
