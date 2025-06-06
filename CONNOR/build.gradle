@@ -1,0 +1,117 @@
+plugins {
+	id 'java-library'
+	id 'idea'
+}
+
+repositories {
+	mavenCentral()
+	jcenter()  // Include JCenter for GraphStream dependencies
+	maven {
+		url "https://repository.ow2.org/nexus/content/groups/public/" // add this line to use OW2 repository
+	}
+}
+
+tasks.withType(JavaExec) {
+	jvmArgs = ['-Xms8g', '-Xmx8g']
+}
+
+dependencies {
+    api 'org.apache.jena:apache-jena-libs:4.4.0'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+	implementation 'net.sourceforge.owlapi:org.semanticweb.hermit:1.4.1.513'
+	implementation group: 'net.sourceforge.owlapi', name: 'org.semanticweb.hermit', version: '1.4.1.513'
+	implementation 'net.sf.trove4j:trove4j:3.0.3'
+	implementation 'com.github.ansell.pellet:pellet-cli:2.3.6-ansell'
+	implementation 'net.sourceforge.owlapi:owlapi-distribution:5.1.14'
+	implementation 'net.sourceforge.owlapi:owlapi-distribution:5.1.17'
+	implementation 'com.google.code.gson:gson:2.8.9'
+	implementation 'org.jfree:jfreechart:1.5.3'
+	implementation 'org.jfree:jcommon:1.0.24'
+	implementation 'org.graphstream:gs-core:2.0'
+	implementation 'org.graphstream:gs-ui-javafx:2.0'  // Correct UI package for visualization
+	implementation 'org.openjfx:javafx-controls:20.0.2'
+	implementation 'org.openjfx:javafx-graphics:20.0.2'
+	implementation 'org.openjfx:javafx-base:20.0.2'
+
+}
+
+sourceSets {
+	main {
+		java {
+			srcDirs = ['src']
+		}
+	}
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+idea {
+	module {
+		downloadJavadoc = true
+	}
+}
+
+compileJava {
+	options.compilerArgs << '-Xlint:unchecked'
+	options.deprecation = true
+}
+
+jar {
+	manifest{
+	}
+}
+
+
+
+// 1- FIRST FILTER THE ER FILES TO ELIMINATE THE NODES THAT WE DO NOT NEED
+task runfilter(type:JavaExec)  {
+	main = 'connor.examples.FilteringDataset'
+	classpath = sourceSets.main.runtimeClasspath
+	args = ['data/ER/', 'data/ER_REFINED/']
+}
+
+// 2- CREATE A TDB BACKED DATASET
+task runCreateTDB(type:JavaExec)  {
+	main = 'connor.examples.TDBCreator'
+	classpath = sourceSets.main.runtimeClasspath
+	args = ['data/HALFER/', 'data/TDB2/']
+}
+
+// 3- CREATE A TDB BACKED DATASET FROM A SPARQL ENDPOINT
+task runTDBFromEndpoint(type:JavaExec)  {
+	main = 'connor.examples.TDBCreatorFromEndpoint'
+	classpath = sourceSets.main.runtimeClasspath
+	args = ['http://localhost:3000/lubm10-05-07/query', 'data/TDB_ENDPOINT_NO_BN/']
+}
+
+// 4- RUN CONNOR ALGORITHM USING DATA FROM THE TDB DATASET
+task runExample(type:JavaExec)  {
+	main = 'connor.examples.Example'
+	classpath = sourceSets.main.runtimeClasspath
+	args = ['data/TDB_ENDPOINT_NO_BN/', 'data/output5.json', 'http://www.department0.university0.edu/graduateStudent44']
+}
+
+// 4- RUN CONNOR BINARY ALGORITHM USING DATA FROM THE TDB DATASET
+task runBinaryExample(type:JavaExec)  {
+	main = 'connor.examples.BinaryExample'
+	classpath = sourceSets.main.runtimeClasspath
+	args = ['data/TDB_ENDPOINT_NO_BN/', 'data/binary-output.json', 'http://www.department3.university0.edu/graduateStudent51', 'http://www.department3.university0.edu/graduateStudent84']
+}
+
+
+task testrules(type:JavaExec)  {
+	main = 'connor.examples.inference'
+	classpath = sourceSets.main.runtimeClasspath
+	args = []
+}
+task compclosure(type:JavaExec)  {
+	main = 'connor.examples.compclosure'
+	classpath = sourceSets.main.runtimeClasspath
+	args = []
+}
+
+wrapper {
+	gradleVersion = "7.4.2"
+}
