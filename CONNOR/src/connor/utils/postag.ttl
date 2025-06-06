@@ -1,0 +1,35 @@
+@prefix pos:     <http://example.org/pos#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+pos:VBP
+      rdfs:subClassOf pos:VB .
+
+pos:VBN
+      rdfs:subClassOf pos:VB .
+
+pos:NNS
+      rdfs:subClassOf pos:NN .
+
+pos:VBD
+      rdfs:subClassOf pos:VB .
+
+pos:RBR
+      rdfs:subClassOf pos:RB .
+
+pos:RBS
+      rdfs:subClassOf pos:RBR .
+
+pos:VBG
+      rdfs:subClassOf pos:VB .
+
+pos:JJR
+      rdfs:subClassOf pos:JJ .
+
+pos:JJS
+      rdfs:subClassOf pos:JJR .
+
+pos:NNPS
+      rdfs:subClassOf pos:NNP .
+
+pos:VBZ
+      rdfs:subClassOf pos:VB .
