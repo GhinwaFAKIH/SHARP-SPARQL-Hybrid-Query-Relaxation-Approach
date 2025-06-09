@@ -59,6 +59,17 @@ The folder BENCH-Answers contains:
 - These answers are obtained by executing the relaxed queries in the order determined by human evaluation.
 
 
+## License
+
+**Shield:**  
+![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
+
+[![CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+
+
 
 
 
