@@ -8,7 +8,7 @@ This repository implements a hybrid SPARQL query relaxation framework, which rel
 Before running any query relaxation tasks, global dataset statistics must be computed. 
 
 
-To compute statistics, run the Statistics java file that extracts and stores statistics.
+To compute statistics, run the Statistics java file that extracts and stores statistics (src/Statistics.java).
 
 Embeddings were computed using RDFStar2vec (Source code could be found here: https://github.com/aistairc/RDF-star2Vec).
 
