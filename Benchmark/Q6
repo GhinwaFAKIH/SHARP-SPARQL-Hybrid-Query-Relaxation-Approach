@@ -11,7 +11,7 @@ SELECT DISTINCT ?student  WHERE {
                                                     ub:courseYear "2024"^^xsd:integer.
 }
 
-RQ1:
+RQ1- human score: 88:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT DISTINCT ?student  WHERE {
@@ -20,7 +20,7 @@ SELECT DISTINCT ?student  WHERE {
                                                     ub:courseYear "2024"^^xsd:integer.
 }
 
-RQ2:
+RQ2- human score: 47:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT DISTINCT ?student  WHERE {
@@ -31,7 +31,7 @@ SELECT DISTINCT ?student  WHERE {
                                                     ub:courseYear "2024"^^xsd:integer.
 }
 
-RQ3:
+RQ3- human score: 44:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT DISTINCT ?student  WHERE {
@@ -40,7 +40,7 @@ SELECT DISTINCT ?student  WHERE {
                                                     ub:courseYear "2024"^^xsd:integer.
 }
 
-RQ4:
+RQ4-human score: 24:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT DISTINCT ?student  WHERE {
@@ -50,7 +50,7 @@ SELECT DISTINCT ?student  WHERE {
 }
 
 
-RQ5:
+RQ5- human score: 19:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT DISTINCT ?student  WHERE {
