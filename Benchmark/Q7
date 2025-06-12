@@ -1,5 +1,8 @@
 Original query and its relaxed queries
 Q7: 
+#Find graduate students who took the graduate course  Data structures and got their degree between 2008 and 2010. 
+(Context: Consider you are a student that took that course).
+
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?student
