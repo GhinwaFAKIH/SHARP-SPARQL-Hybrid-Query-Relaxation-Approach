@@ -11,7 +11,7 @@ WHERE {
                  ub:undergraduateDegreeFrom  <http://www.university103.edu>.
 }
 
-RQ1:
+- human score: 72:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?student
 WHERE {
@@ -20,7 +20,7 @@ WHERE {
                  ub:undergraduateDegreeFrom  <http://www.university103.edu>.
 }
 
-RQ2:
+RQ2 - human score: 58:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?student
 WHERE {
@@ -29,7 +29,7 @@ WHERE {
                  ub:undergraduateDegreeFrom  <http://www.university103.edu>.
 }
 
-RQ3:
+RQ3 - human score: 38:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?student
 WHERE {
@@ -38,7 +38,7 @@ WHERE {
                  ub:undergraduateDegreeFrom  <http://www.university103.edu>.
 }
 
-RQ4:
+RQ4 - human score: 32:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?student
 WHERE {
@@ -47,7 +47,7 @@ WHERE {
                  ub:undergraduateDegreeFrom  <http://www.university103.edu>.
 }
 
-RQ5:
+RQ5 - human score: 20:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?student
 WHERE {
