@@ -1,5 +1,7 @@
 Original query and its relaxed queries
 Q1 - 1: 
+# Find professors who are members of Computer Science department at Nantes University. 
+(Context: Consider yourself as a Computer science professor searching for people close to your field).
 
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?prof
