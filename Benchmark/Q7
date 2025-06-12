@@ -13,7 +13,7 @@ WHERE {
  FILTER (?year >= "2008"^^xsd:integer && ?year <= "2010"^^xsd:integer ).
 }
 
-RQ1:
+RQ1- human score: 81:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?student
@@ -24,7 +24,7 @@ WHERE {
  FILTER (?year >= "2007"^^xsd:integer && ?year <= "2011"^^xsd:integer ).
 }
 
-RQ2:
+RQ2- human score: 60:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?student
@@ -43,7 +43,7 @@ WHERE {
  FILTER (?year >= "2008"^^xsd:integer && ?year <= "2010"^^xsd:integer ).
 }
 
-RQ3:
+RQ3- human score: 37:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?student
@@ -54,7 +54,7 @@ WHERE {
 
 }
 
-RQ4:
+RQ4- human score: 26:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?student
@@ -65,7 +65,7 @@ WHERE {
  FILTER (?year >= "2008"^^xsd:integer && ?year <= "2010"^^xsd:integer ).
 }
 
-RQ5:
+RQ5- human score: 19:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?student
