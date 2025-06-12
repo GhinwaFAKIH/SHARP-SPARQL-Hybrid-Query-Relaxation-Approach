@@ -1,5 +1,7 @@
 Original query and its relaxed queries
 Q5: 
+#Find graduate students who took graduate course Data Structures and got their undergraduate degree in 2010. 
+(Context: A university wants to study the career paths of students who completed their undergraduate degrees in 2010 and later pursued advanced studies in computer science.)
 
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
