@@ -11,7 +11,7 @@ WHERE {
 }
 
 
-RQ1:
+RQ1 - human score: 75:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?X
 WHERE {
@@ -19,7 +19,7 @@ WHERE {
   ?Y    ub:worksFor   <http://www.department3.0.university0.edu>.
 }
 
-RQ2:
+RQ2 - human score: 59:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?X
 WHERE {
@@ -29,7 +29,7 @@ WHERE {
   ?Y2    ub:headOf   <http://www.department3.0.university1.edu>.
 }
 
-RQ3:
+RQ3 - human score: 37:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?X
 WHERE {
@@ -37,7 +37,7 @@ WHERE {
   ?Y    ub:headOf   <http://www.department804.0.university8.edu>.
 }
 
-RQ4:
+RQ4 - human score: 31:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?X
 WHERE {
@@ -45,7 +45,7 @@ WHERE {
   ?Y    ub:headOf   ?dept.
 }
 
-RQ5:
+RQ5 - human score: 20:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?X
 WHERE {
