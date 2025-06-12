@@ -1,5 +1,7 @@
 Original query and its relaxed queries
 Q4: 
+#Find students whose advisor is the head of Genetics department at Sorbonne University. 
+(Context: Imagine you're a new student who wants to connect with other students in the Genetics department. So far, you only know the head of the department).
 
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?X
