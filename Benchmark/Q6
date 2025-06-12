@@ -1,5 +1,7 @@
 Original query and its relaxed queries
 Q6: 
+#Find students who took undergraduate course genetics  in Autumn 2024. 
+(Context: here imagine you were not able to attend the course and you want someone to help you for the exam).
 
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
