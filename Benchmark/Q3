@@ -1,5 +1,7 @@
 Original query and its relaxed queries
 Q3: 
+# Find graduate students who take graduate course Machine learning at computer science department at Nantes University  and got their undergraduate degree from Nantes University. 
+(Context: Consider yourself as a graduate student of Machine Learning course searching for people to discuss with).
 
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT DISTINCT ?x
