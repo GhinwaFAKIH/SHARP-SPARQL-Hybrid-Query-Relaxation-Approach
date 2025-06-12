@@ -10,7 +10,7 @@ WHERE {
            ub:memberOf <http://www.department403.university4.edu>.
 }
 
-RQ1 - 0.8:
+RQ1 - human score: 81:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?prof
 WHERE {
@@ -18,7 +18,7 @@ WHERE {
            ub:memberOf <http://www.department403.university4.edu>.
 }
 
-RQ2 - 0.5:
+RQ2 - human score: 50:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?prof
 WHERE {
@@ -26,7 +26,7 @@ WHERE {
            ub:memberOf <http://www.department403.university4.edu>.
 }
 
-RQ3 - 0.38:
+RQ3 - humain score: 36:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?prof
 WHERE {
@@ -34,7 +34,7 @@ WHERE {
            ub:memberOf <http://www.department422.university4.edu>.
 }
 
-RQ4 - 0.31:
+RQ4 - human score: 33:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT ?prof
 WHERE {
@@ -42,7 +42,7 @@ WHERE {
            ub:memberOf <http://www.department319.university3.edu>.
 }
 
-RQ5 - 0.23:
+RQ5 - human score: 23:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT DISTINCT ?professor
 WHERE {
