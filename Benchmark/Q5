@@ -12,7 +12,7 @@ WHERE {
   << ?x ub:undergraduateDegreeFrom ?y >> ub:yearOfAward "2010"^^xsd:integer.
 }
 
-RQ1:
+RQ1- human score: 79 :
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?x
@@ -23,7 +23,7 @@ WHERE {
   FILTER(?year >= 2009 && ?year <= 2011)
 }
 
-RQ2:
+RQ2- human score: 53: 
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?x
@@ -41,7 +41,7 @@ WHERE {
 }
 
 
-RQ3:
+RQ3 - human score: 38:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?x
@@ -52,7 +52,7 @@ WHERE {
 }
 
 
-RQ4:
+RQ4 - human score: 26:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?x
@@ -63,7 +63,7 @@ WHERE {
 }
 
 
-RQ5:
+RQ5- human score: 21:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?x
@@ -74,7 +74,7 @@ WHERE {
 }
 
 
-RQ6:
+RQ6- human score: 16:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?x
