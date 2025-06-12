@@ -10,7 +10,7 @@ WHERE
  ?z ub:researchInterest "Gene Expression Analysis" . }
 
 
-RQ1:
+RQ1 - human score: 70:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT DISTINCT ?x
 WHERE
@@ -21,7 +21,7 @@ WHERE
   ?pub ub:publicationAuthor ?person2 .}
 
 
-RQ2:
+RQ2 - human score: 66:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT DISTINCT ?x
 WHERE
@@ -30,7 +30,7 @@ WHERE
  ?z ub:researchInterest "Gene Expression Profiling" . }
 
 
-RQ3:
+RQ3 - human score: 39:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT DISTINCT ?x
 WHERE
@@ -39,7 +39,7 @@ WHERE
  ?z ub:researchInterest "Genomics" . }
 
 
-RQ4:
+RQ4 - human score: 22:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT DISTINCT ?x
 WHERE
@@ -48,7 +48,7 @@ WHERE
  ?z ub:researchInterest "Image Segmentation" . }
 
 
-RQ5:
+RQ5 - human score: 19:
 PREFIX ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
 SELECT DISTINCT ?x
 WHERE
