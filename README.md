@@ -16,7 +16,7 @@ This repository implements a hybrid SPARQL query relaxation framework, which rel
 ✅ Enable evaluation of relaxation models using human-judgment-based relevance assessments.
 
 
-# 🧱 Project Structure
+# ⚙️ Project Structure
 **`src/`**: Houses all the core classes of the project:
 
 
