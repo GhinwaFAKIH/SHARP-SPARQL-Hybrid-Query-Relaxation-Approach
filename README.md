@@ -45,6 +45,14 @@ Refer to the original project [here](https://gitlab.inria.fr/hayats/CONNOR).
 **`BENCH-Answers/`**: Contains the answers to the queries, ranked according to the order of relaxed queries in the benchmark.
 
 
+**`OMBS_results/`**: Contains the results of the ontology-based relaxation model (OMBS).
+
+
+**`SHARP_results/`**: Contains the results of our hybrid relaxation model SHARP.
+
+
+
+# 🧱 Running Steps
 **Step 1: Compute Dataset Statistics and mapping function matrices**
 
 Before running any query relaxation tasks, global dataset statistics must be computed. 
