@@ -38,6 +38,11 @@ This repository implements a hybrid SPARQL query relaxation framework, which rel
 Refer to the original project [here](https://gitlab.inria.fr/hayats/CONNOR).
 
 
+
+**`Benchmark/`**: Contains the seven new queries, each written in natural language and accompanied by its context. Each query is also accompanied by a set of relaxed queries ranked based on a user survey.
+
+
+
 **Step 1: Compute Dataset Statistics and mapping function matrices**
 
 Before running any query relaxation tasks, global dataset statistics must be computed. 
