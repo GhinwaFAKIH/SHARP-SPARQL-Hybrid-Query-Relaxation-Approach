@@ -16,7 +16,7 @@ This repository implements a hybrid SPARQL query relaxation framework, which rel
 ✅ Enable evaluation of relaxation models using human-judgment-based relevance assessments.
 
 
-# ⚙️ Project Structure
+# 🧱 Project Structure
 **`src/`**: Houses all the core classes of the project:
 
 
@@ -52,7 +52,7 @@ Refer to the original project [here](https://gitlab.inria.fr/hayats/CONNOR).
 
 
 
-# 🧱 Running Steps
+# ⚙️ Running Steps
 **Step 1: Compute Dataset Statistics and mapping function matrices**
 
 Before running any query relaxation tasks, global dataset statistics must be computed. 
