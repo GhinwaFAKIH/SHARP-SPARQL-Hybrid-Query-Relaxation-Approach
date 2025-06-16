@@ -17,7 +17,7 @@ This repository implements a hybrid SPARQL query relaxation framework, which rel
 
 
 # 🧱 Project Structure
-# src
+# src/
 
 
 Houses all the core classes of the project:
