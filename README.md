@@ -1,5 +1,6 @@
 # 🚀 SHARP: A Hybrid Approach for SPARQL Query Relaxation
-
+SHARP is a hybrid SPARQL query relaxation system that integrates ontology-based and entity-based strategies to improve query results when exact matches are unavailable. 
+It handles relaxations on classes, properties, entities, and literals using an information-content-based ranking system. SHARP addresses the combinatorial challenge of multiple relaxations and provides fair ranking across different relaxation types.
 This repository implements a hybrid SPARQL query relaxation framework, which relies on precomputed statistics and mapping functions to support entity- and ontology-based relaxation. It is build upon OMBS[1] (an optimized ontology-based relaxation strategy). 
 
 **Step 1: Compute Dataset Statistics and mapping function matrices**
