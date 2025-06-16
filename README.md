@@ -16,11 +16,12 @@ This repository implements a hybrid SPARQL query relaxation framework, which rel
 ✅ Enable evaluation of relaxation models using human-judgment-based relevance assessments.
 
 
+# 🧱 Project Structure
+
+
 **Step 1: Compute Dataset Statistics and mapping function matrices**
 
-
 Before running any query relaxation tasks, global dataset statistics must be computed. 
-
 
 To compute statistics, run the Statistics java file that extracts and stores statistics (src/Statistics.java).
 
