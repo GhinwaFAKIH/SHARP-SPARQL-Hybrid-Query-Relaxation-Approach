@@ -3,6 +3,19 @@ SHARP is a hybrid SPARQL query relaxation system that integrates ontology-based 
 It handles relaxations on classes, properties, entities, and literals using an information-content-based ranking system. SHARP addresses the combinatorial challenge of multiple relaxations and provides fair ranking across different relaxation types.
 This repository implements a hybrid SPARQL query relaxation framework, which relies on precomputed statistics and mapping functions to support entity- and ontology-based relaxation. It is build upon OMBS[1] (an optimized ontology-based relaxation strategy). 
 
+# 🎯 Project Aim:
+
+✅ Retrieve top-k relevant results when SPARQL queries return no or few matches.
+
+✅ Combine ontology-based (class/property) and entity-based (instance/literal) relaxation strategies into a hybrid model.
+
+✅ Rank relaxed query results using a unified, information-content-based similarity measure.
+
+✅ Provide an extended benchmark (based on LUBM4OBDA) with new queries targeting different relaxation types.
+
+✅ Enable evaluation of relaxation models using human-judgment-based relevance assessments.
+
+
 **Step 1: Compute Dataset Statistics and mapping function matrices**
 
 
