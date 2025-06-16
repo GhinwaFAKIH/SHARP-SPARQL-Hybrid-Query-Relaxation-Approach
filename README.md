@@ -59,7 +59,7 @@ Before running any query relaxation tasks, global dataset statistics must be com
 
 To compute statistics, run the Statistics java file that extracts and stores statistics (src/Statistics.java).
 
-Embeddings were computed using RDFStar2vec (Source code could be found here: https://github.com/aistairc/RDF-star2Vec).
+Embeddings were computed using RDFStar2vec (Source code could be found here: https://github.com/aistairc/RDF-star2Vec). Then compute the cosine similarity matrix of vectors using : /cosine_similarity_matrix.py
 
 
 **Step 2: Prepare Dataset**
