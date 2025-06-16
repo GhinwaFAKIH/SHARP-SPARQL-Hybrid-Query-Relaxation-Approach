@@ -21,16 +21,17 @@ This repository implements a hybrid SPARQL query relaxation framework, which rel
 Houses all the core classes of the project:
 
 
-start/: Entry point of the application. Initializes configurations, loads data, triggers the relaxation and ranking pipeline, and prints top-k results.
+• start/:  
+  Entry point of the application. Initializes configurations, loads data, triggers the relaxation and ranking pipeline, and prints top-k results.
 
+• Similarity/:  
+  Contains modules for computing similarity between classes, properties, entities, and literals.
 
-Similarity/: Modules handling similarity computations. 
+• RDFStarRelaxer/:  
+  Implements the core logic specific to RDF-Star query relaxation, extending standard SPARQL relaxation to support reification.
 
-
-RDFStarRelaxer/: Core logic for RDF-Star-specific query relaxation.
-
-
-utils/: Utility functions and helper classes.
+• utils/:  
+  Provides utility functions and helper classes for common tasks.
 
 
 **Step 1: Compute Dataset Statistics and mapping function matrices**
