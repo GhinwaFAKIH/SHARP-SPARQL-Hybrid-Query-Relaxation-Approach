@@ -36,6 +36,11 @@ Houses all the core classes of the project:
   Provides utility functions and helper classes for common tasks.
 
 
+
+**`CONNOR/`**:Contains the full source code for the entity-based relaxation method used in the evaluation.
+Refer to the original project [here](https://gitlab.inria.fr/hayats/CONNOR).
+
+
 **Step 1: Compute Dataset Statistics and mapping function matrices**
 
 Before running any query relaxation tasks, global dataset statistics must be computed. 
