@@ -42,6 +42,8 @@ Refer to the original project [here](https://gitlab.inria.fr/hayats/CONNOR).
 **`Benchmark/`**: Contains the seven new queries, each written in natural language and accompanied by its context. Each query is also accompanied by a set of relaxed queries ranked based on a user survey.
 
 
+**`BENCH-Answers/`**: Contains the answers to the queries, ranked according to the order of relaxed queries in the benchmark.
+
 
 **Step 1: Compute Dataset Statistics and mapping function matrices**
 
